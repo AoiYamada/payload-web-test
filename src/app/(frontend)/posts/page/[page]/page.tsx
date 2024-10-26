@@ -6,22 +6,21 @@ import { Pagination } from '@/components/Pagination'
 import configPromise from '@payload-config'
 import { getPayloadHMR } from '@payloadcms/next/utilities'
 import React from 'react'
-import PageClient from './page.client'
 import { notFound } from 'next/navigation'
 
 export const revalidate = 600
 
 type Args = {
   params: Promise<{
-    pageNumber: string
+    page: string
   }>
 }
 
 export default async function Page({ params: paramsPromise }: Args) {
-  const { pageNumber } = await paramsPromise
+  const { page } = await paramsPromise
   const payload = await getPayloadHMR({ config: configPromise })
 
-  const sanitizedPageNumber = Number(pageNumber)
+  const sanitizedPageNumber = Number(page)
 
   if (!Number.isInteger(sanitizedPageNumber)) notFound()
 
@@ -35,7 +34,6 @@ export default async function Page({ params: paramsPromise }: Args) {
 
   return (
     <div className="pt-24 pb-24">
-      <PageClient />
       <div className="container mb-16">
         <div className="prose dark:prose-invert max-w-none">
           <h1>Posts</h1>
@@ -63,9 +61,9 @@ export default async function Page({ params: paramsPromise }: Args) {
 }
 
 export async function generateMetadata({ params: paramsPromise }: Args): Promise<Metadata> {
-  const { pageNumber } = await paramsPromise
+  const { page } = await paramsPromise
   return {
-    title: `Payload Website Template Posts Page ${pageNumber || ''}`,
+    title: `Payload Website Template Posts Page ${page || ''}`,
   }
 }
 
@@ -79,10 +77,10 @@ export async function generateStaticParams() {
     overrideAccess: false,
   })
 
-  const pages: { pageNumber: string }[] = []
+  const pages: { page: string }[] = []
 
   for (let i = 1; i <= posts.totalPages; i++) {
-    pages.push({ pageNumber: String(i) })
+    pages.push({ page: String(i) })
   }
 
   return pages

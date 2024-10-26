@@ -61,6 +61,7 @@ export const seed = async ({
       data: {
         navItems: [],
       },
+      // data: {},
       req,
     })
   }
@@ -321,6 +322,405 @@ export const seed = async ({
         },
       ],
     },
+    // data: {
+    //   tabs: [
+    //     {
+    //       label: 'Use Cases',
+    //       enableDirectLink: true,
+    //       enableDropdown: true,
+    //       link: {
+    //         type: 'custom',
+    //         url: '/use-cases',
+    //       },
+    //       navItems: [
+    //         {
+    //           style: 'default',
+    //           defaultLink: {
+    //             link: {
+    //               type: 'custom',
+    //               url: '/use-cases/headless-cms',
+    //               label: 'Content Management System',
+    //             },
+    //             description:
+    //               'Create with a minimal, powerful editing experience. Extend effortlessly.',
+    //           },
+    //         },
+    //         {
+    //           style: 'default',
+    //           defaultLink: {
+    //             link: {
+    //               type: 'custom',
+    //               url: '/use-cases/enterprise-app-builder',
+    //               label: 'Enterprise App Builder',
+    //             },
+    //             description:
+    //               'Build sophisticated enterprise tools while reducing development costs.',
+    //           },
+    //         },
+    //         {
+    //           style: 'default',
+    //           defaultLink: {
+    //             link: {
+    //               type: 'custom',
+    //               url: '/use-cases/headless-ecommerce',
+    //               label: 'Headless E-commerce',
+    //             },
+    //             description:
+    //               'Manage all your content, alongside your products, in a single, powerful editing experience.',
+    //           },
+    //         },
+    //         {
+    //           style: 'default',
+    //           defaultLink: {
+    //             link: {
+    //               type: 'custom',
+    //               url: '/use-cases/digital-asset-management',
+    //               label: 'Digital Asset Management',
+    //             },
+    //             description:
+    //               'Ensure brand consistency by seamlessly managing digital assets within your CMS.',
+    //           },
+    //         },
+    //       ],
+    //     },
+    //     {
+    //       label: 'Why Payload',
+    //       enableDirectLink: false,
+    //       enableDropdown: true,
+    //       navItems: [
+    //         {
+    //           style: 'default',
+    //           defaultLink: {
+    //             link: {
+    //               type: 'custom',
+    //               url: '/marketers',
+    //               label: 'For Marketing Teams',
+    //             },
+    //             description:
+    //               'Advanced features like Visual Editing and Live Preview are giving a head back to the headless CMS.',
+    //           },
+    //         },
+    //         {
+    //           style: 'default',
+    //           defaultLink: {
+    //             link: {
+    //               type: 'custom',
+    //               url: '/become-a-partner',
+    //               label: 'For Agencies',
+    //             },
+    //             description:
+    //               'Learn how Payload delivers for software consultancies with a content framework that can build anything.',
+    //           },
+    //         },
+    //         {
+    //           style: 'default',
+    //           defaultLink: {
+    //             link: {
+    //               type: 'custom',
+    //               url: '/developers',
+    //               label: 'For Developers',
+    //             },
+    //             description:
+    //               'Built with React & TypeScript, depart restrictive “no-code” options and write code you’re proud of.',
+    //           },
+    //         },
+    //       ],
+    //     },
+    //     {
+    //       label: 'Developers',
+    //       enableDirectLink: true,
+    //       enableDropdown: true,
+    //       link: {
+    //         type: 'custom',
+    //         url: '/developers',
+    //       },
+    //       navItems: [
+    //         {
+    //           style: 'list',
+    //           listLinks: {
+    //             tag: 'Resources',
+    //             links: [
+    //               {
+    //                 link: {
+    //                   type: 'custom',
+    //                   url: '/docs',
+    //                   label: 'Documentation',
+    //                 },
+    //               },
+    //               {
+    //                 link: {
+    //                   type: 'custom',
+    //                   url: 'https://github.com/payloadcms/payload/tree/main/examples',
+    //                   label: 'Examples',
+    //                   newTab: true,
+    //                 },
+    //               },
+    //               {
+    //                 link: {
+    //                   type: 'custom',
+    //                   url: 'https://github.com/payloadcms/payload/tree/main/templates',
+    //                   label: 'Templates',
+    //                   newTab: true,
+    //                 },
+    //               },
+    //               {
+    //                 link: {
+    //                   type: 'custom',
+    //                   url: 'https://github.com/payloadcms/payload',
+    //                   label: 'GitHub',
+    //                   newTab: true,
+    //                 },
+    //               },
+    //               {
+    //                 link: {
+    //                   type: 'custom',
+    //                   url: '/blog',
+    //                   label: 'Blog',
+    //                 },
+    //               },
+    //             ],
+    //           },
+    //         },
+    //         {
+    //           style: 'list',
+    //           listLinks: {
+    //             tag: 'Community',
+    //             links: [
+    //               {
+    //                 link: {
+    //                   type: 'custom',
+    //                   url: 'https://github.com/payloadcms/payload/discussions/categories/roadmap',
+    //                   label: 'Roadmap',
+    //                   newTab: true,
+    //                 },
+    //               },
+    //               {
+    //                 link: {
+    //                   type: 'custom',
+    //                   url: 'https://discord.com/invite/r6sCXqVk3v',
+    //                   label: 'Discord',
+    //                   newTab: true,
+    //                 },
+    //               },
+    //               {
+    //                 link: {
+    //                   type: 'custom',
+    //                   url: '/community-help',
+    //                   label: 'Community Help',
+    //                 },
+    //               },
+    //             ],
+    //           },
+    //         },
+    //         {
+    //           style: 'featured',
+    //           featuredLink: {
+    //             tag: 'Payload Cloud',
+    //             label: {
+    //               root: {
+    //                 type: 'root',
+    //                 children: [
+    //                   {
+    //                     children: [
+    //                       {
+    //                         detail: 0,
+    //                         format: 0,
+    //                         mode: 'normal',
+    //                         style: '',
+    //                         text: 'Deploy your entire stack in one place with Payload Cloud.',
+    //                         type: 'text',
+    //                         version: 1,
+    //                       },
+    //                     ],
+    //                     direction: 'ltr',
+    //                     format: '',
+    //                     indent: 0,
+    //                     type: 'paragraph',
+    //                     version: 1,
+    //                     textFormat: 0,
+    //                     textStyle: '',
+    //                   },
+    //                 ],
+    //                 direction: 'ltr',
+    //                 format: '',
+    //                 indent: 0,
+    //                 version: 1,
+    //               },
+    //             },
+    //             links: [
+    //               {
+    //                 link: {
+    //                   type: 'custom',
+    //                   url: '/login',
+    //                   label: 'Login',
+    //                 },
+    //               },
+    //               {
+    //                 link: {
+    //                   type: 'custom',
+    //                   url: '/cloud-pricing',
+    //                   label: 'Cloud Pricing',
+    //                 },
+    //               },
+    //             ],
+    //           },
+    //         },
+    //       ],
+    //     },
+    //     {
+    //       label: 'Enterprise',
+    //       enableDirectLink: true,
+    //       enableDropdown: true,
+    //       link: {
+    //         type: 'custom',
+    //         url: '/enterprise',
+    //       },
+    //       navItems: [
+    //         {
+    //           style: 'list',
+    //           listLinks: {
+    //             tag: 'Enterprise Features',
+    //             links: [
+    //               {
+    //                 link: {
+    //                   type: 'custom',
+    //                   url: '/enterprise/single-sign-on-sso',
+    //                   label: 'SSO',
+    //                 },
+    //               },
+    //               {
+    //                 link: {
+    //                   type: 'custom',
+    //                   url: '/enterprise/publishing-workflows',
+    //                   label: 'Publishing Workflows',
+    //                 },
+    //               },
+    //               {
+    //                 link: {
+    //                   type: 'custom',
+    //                   url: '/enterprise/visual-editor',
+    //                   label: 'Visual Editor',
+    //                 },
+    //               },
+    //               {
+    //                 link: {
+    //                   type: 'custom',
+    //                   url: '/enterprise/headless-ab-variant-testing',
+    //                   label: 'Static A/B testing',
+    //                 },
+    //               },
+    //               {
+    //                 link: {
+    //                   type: 'custom',
+    //                   url: '/enterprise/enterprise-ai',
+    //                   label: 'AI features',
+    //                 },
+    //               },
+    //             ],
+    //           },
+    //         },
+    //         {
+    //           style: 'list',
+    //           listLinks: {
+    //             tag: 'Customer Stories',
+    //             links: [
+    //               {
+    //                 link: {
+    //                   type: 'custom',
+    //                   url: '/case-studies/microsoft',
+    //                   label: 'Microsoft',
+    //                 },
+    //               },
+    //               {
+    //                 link: {
+    //                   type: 'custom',
+    //                   url: '/case-studies/blue-origin-club-for-the-future',
+    //                   label: 'Blue Origin',
+    //                 },
+    //               },
+    //               {
+    //                 link: {
+    //                   type: 'custom',
+    //                   url: '/case-studies/hello-bello',
+    //                   label: 'Hello Bello',
+    //                 },
+    //               },
+    //               {
+    //                 link: {
+    //                   type: 'custom',
+    //                   url: '/case-studies/mythical-society',
+    //                   label: 'Mythical Society',
+    //                 },
+    //               },
+    //               {
+    //                 link: {
+    //                   type: 'custom',
+    //                   url: '/case-studies/tekton',
+    //                   label: 'Tekton',
+    //                 },
+    //               },
+    //             ],
+    //           },
+    //         },
+    //         {
+    //           style: 'featured',
+    //           featuredLink: {
+    //             tag: 'Featured Customer Story',
+    //             label: {
+    //               root: {
+    //                 type: 'root',
+    //                 children: [
+    //                   {
+    //                     children: [
+    //                       {
+    //                         detail: 0,
+    //                         format: 0,
+    //                         mode: 'normal',
+    //                         style: '',
+    //                         text: 'Microsoft chose Payload to tell the world about AI.',
+    //                         type: 'text',
+    //                         version: 1,
+    //                       },
+    //                     ],
+    //                     direction: 'ltr',
+    //                     format: '',
+    //                     indent: 0,
+    //                     type: 'paragraph',
+    //                     version: 1,
+    //                     textFormat: 0,
+    //                     textStyle: '',
+    //                   },
+    //                 ],
+    //                 direction: 'ltr',
+    //                 format: '',
+    //                 indent: 0,
+    //                 version: 1,
+    //               },
+    //             },
+    //             links: [
+    //               {
+    //                 link: {
+    //                   type: 'custom',
+    //                   url: '/case-studies/microsoft',
+    //                   label: 'Read the case study',
+    //                 },
+    //               },
+    //             ],
+    //           },
+    //         },
+    //       ],
+    //     },
+    //     {
+    //       label: 'Docs',
+    //       enableDirectLink: true,
+    //       enableDropdown: false,
+    //       link: {
+    //         type: 'custom',
+    //         url: '/docs',
+    //       },
+    //     },
+    //   ],
+    // },
     req,
   })
 
